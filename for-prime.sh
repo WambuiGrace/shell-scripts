@@ -1,19 +1,7 @@
 #!/bin/bash
 
-# Check if a parameter is provided
-if [ -z "$1" ]; then
-  echo "Error: Please provide an integer as a parameter."
-  exit 1
-fi
-
 # Read the input 
 n=$1
-
-# Input == valid positive integer
-if ! [[ "$n" =~ ^[0-9]+$ ]] || [ "$n" -lt 2 ]; then
-  echo "Error: The input must be a positive integer greater than or equal to 2."
-  exit 1
-fi
 
 # Function: Number == prime number
 is_prime() {
